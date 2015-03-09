@@ -10,35 +10,37 @@
   <meta charset="utf-8">
   <title>Chat</title>
   <link rel = "stylesheet" type="text/css" href="style.css">
+  <script src="chat.js"></script>
 </head>
-<body>
+<body onload = "run();">
   <heading>
     <h1>
     <font size = "7" face = "Arial"><b>Chat</b></font>
     </h1>
   </heading>
+  <section class = "chat">
   <rad>
      <p><input type="radio"> Server is available</p>
      <p><input type="radio" checked> Server is unavailable</p>
   </rad>
   <editDel>
-    <input type="submit" value="Delete message" class="submit">
+    <input type="button" value="Delete message" class="submit">
      <p>
-    <input type="submit" value="Edit message" class="submit">
+    <input type="button" value="Edit message" class="submit">
      </p></editDel>
   
   <messField>
-      <input type = "text" size="20" maxlength = "50" value="Enter your name" style = "background: #F2C9FB"></input>
+      <input type = "text" id = "my name" size="20" maxlength = "50" placeholder="Enter your name" style = "background: #F2C9FB"></input>
   <p>
-    <textarea rows="27" cols = "100" disabled style = "background: #DACAFB">
+    <textarea id = "all messages" value = "" rows="27" cols = "100" disabled style = "background: #DACAFB">
     </textarea>
-      <textarea rows="5" cols = "100" style = "background: #DACAFB"  placeholder = "Enter your message"></textarea>
-    <input type="submit" class="submit" style="position: absolute; left: 140%" value="Send">
+      <textarea id = "my message" rows="5" cols = "100" style = "background: #DACAFB"  placeholder = "Enter your message"></textarea>
+    <input type="button" id = "1" class="submit" style="position: absolute; left: 140%" value="Send" onClick = "delegateEvent(this)">
   </messField>
+  <div class = "message strikeout">
+    
+  </message>
+  </section>
   </p>
-  
-   
-   
- 
 </body>
 </html>
