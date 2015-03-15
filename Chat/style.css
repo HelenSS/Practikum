@@ -36,15 +36,13 @@ messField
   background-color: #C9F1FD;
 }
 
-.submit
-{
+.submit{
   background-color: #8B51F5;
   height: 40px;
   width: 150px;
 }
 
-editDel
-{
+editDel{
   position: absolute;   
   top: 30%;
   left: 80%;

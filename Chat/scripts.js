@@ -54,7 +54,7 @@ function delegateEvent(evtObj) {
  		id = evtObj.id;
 		ind = find (evtObj.id);
 		ed = true;
-		}
+	}
 }
 
 function sendMessage (evtObj) {
