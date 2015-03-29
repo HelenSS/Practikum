@@ -1,0 +1,10 @@
+GET http://192.168.1.2:999/chat?token=TK51EN HTTP/1.1
+User-Agent: Composer
+Host: 192.168.1.2:999
+
+
+HTTP/1.1 200 OK
+Date: Mon, 23 Mar 2015 19:18:53 GMT
+Content-length: 53
+
+{"messages":["message2 from user2"],"token":"TN19EN"}

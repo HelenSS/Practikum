@@ -86,6 +86,9 @@ function createMessage (mess) {
   	newMess.setAttribute ("class", "mess");
   	newMess.setAttribute ("onClick", "delegateEvent(this)");
   	document.getElementById ("rect").appendChild (newMess);
+
+	var block = document.getElementById("rect");
+ 	block.scrollTop = block.scrollHeight;
 }
 
 function deleteMessage (evtObj) {
