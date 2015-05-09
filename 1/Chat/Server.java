@@ -107,14 +107,28 @@ public class Server implements HttpHandler {
     private void doPut(HttpExchange httpExchange) throws Exception {
         Message message = messageExchange.getClientMessage(httpExchange.getRequestBody());
         System.out.println("Update task from User : " + message.toString() );
-	messageList.get(messageList.indexOf(message)).messageText = message.messageText;
+	for (int i=0; i<messageList.size(); i++)
+	{
+	    if (messageList.get(i).id.equals (message.id))
+		{
+		    messageList.set (i, message);
+		    return;
+		}
+	}
         throw new Exception("Invalid message id " + message.id);
     }
 
     private void doDelete(HttpExchange httpExchange) throws Exception {
         Message message = messageExchange.getClientMessage(httpExchange.getRequestBody());
         System.out.println("Delete message from User : " + message.toString() );
-        messageList.remove(messageList.indexOf(message));
+	for (int i=0; i<messageList.size(); i++)
+	{
+	    if (messageList.get(i).id.equals (message.id))
+		{
+		    messageList.remove (i);
+		    return;
+		}
+	}
         throw new Exception("Invalid message id " + message.id);
     }
 

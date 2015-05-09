@@ -13,14 +13,4 @@ public String toString() {
 	return "{\"id\":\"" + this.id + "\",\"user\":\"" + this.user + "\",\"messageText\":\"" + this.messageText + "\"}";
 }
 
-public boolean equals(Message mess) {
-	if(mess.id != this.id)
-		return false;
-	if(mess.user != this.user)
-		return false;
-	if(mess.messageText != this.messageText)
-		return false;
-	return true;
-}
-
 };
